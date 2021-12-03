@@ -6,11 +6,19 @@
 
 #include "TestGlm.h"
 #include "TestTriangle.h"
+#include "TestCubie.h"
+#include "TestCompoundCube.h"
+#include "TestKey.h"
+#include "TestMouse.h"
 
 // Collection of test classes.
 GameInterface gDummyTest;
 TestGlm gTestGlm;
 TestTriangle gTestTriangle;
+TestCubie gTestCubie;
+TestKey gTestKey;
+TestMouse gTestMouse;
+
 
 GameInterface* gUsedInterface
 
@@ -71,7 +79,12 @@ int main()
 {
 	// gUsedInterface = &gDummyTest;
 	// gUsedInterface = &gTestGlm;
-	gUsedIterface = &gTestTriangle;
+	// gUsedIterface = &gTestTriangle;
+	// gUsedInterface = &gTestCubie;
+	// gUsedInterface = &gTestCompound;
+	// gUsedInterface = &gTestKey;
+	gUsedInterface = &gTestMouse;
+
 	GLFWwindow* window = InitializeSystem();
 	RunCoreloop(window);
 	ShutdownSystem();
